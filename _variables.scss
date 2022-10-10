@@ -1,0 +1,16 @@
+$color-grey-one: #6b717f;
+$color-white: #fff;
+$color-grey-two: #8c8c8c;
+$color-black: #000000;
+$color-red: red;
+$color-green: green;
+$color-orange: orange;
+$color-purple: #bf4080;
+$padding: 16px;
+$margin: 16px;
+@mixin box-shadow {
+  border: 1px $color-grey-two solid;
+  -webkit-box-shadow: 10px 10px 15px -4px $color-grey-one;
+  -moz-box-shadow: 10px 10px 15px -4px $color-grey-one;
+  box-shadow: 10px 10px 15px -4px $color-grey-one;
+}

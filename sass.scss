@@ -1,0 +1,101 @@
+@import "variables.scss";
+body {
+  font: 100% "Space Mono", monospace;
+  color: $color-grey-one;
+  margin: $margin;
+  padding: $padding;
+  background-color: $color-white;
+  overflow-x: hidden;
+}
+
+main {
+  padding: 0 1em;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+
+  section {
+    flex-grow: 1;
+    flex-basis: 45%;
+    @include box-shadow;
+    padding: $padding;
+    margin: $margin;
+    clear: both;
+    overflow: auto;
+    box-sizing: border-box;
+    &#selling-points {
+      flex-grow: 2;
+      flex-basis: 100%;
+    }
+  }
+  code {
+    background: color;
+    border: 1px solid $color-grey-one;
+    color: $color-grey-two;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: $margin;
+    max-width: 100%;
+    overflow: auto;
+    padding: $padding;
+    display: block;
+    word-wrap: break-word;
+    &.before {
+      float: left;
+      width: 40%;
+    }
+    &.after {
+      float: right;
+      width: 40%;
+    }
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $color-purple;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: $padding * 2;
+  margin-bottom: $margin - $margin;
+}
+
+.messages {
+  padding: $padding;
+}
+.success,
+.error,
+.warning {
+  border: 1px solid $color-grey-two;
+  @extend .messages;
+  color: $color-white;
+}
+
+.success {
+  background-color: $color-green;
+}
+
+.error {
+  background-color: $color-red;
+  &:hover {
+    background-color: $color-green;
+  }
+}
+
+.warning {
+  background-color: $color-orange;
+}
+.adv-item {
+}
